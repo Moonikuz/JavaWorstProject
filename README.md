@@ -1,2 +1,2 @@
-# JavaWorstProject
-Don't care
+# JavaTestingProject
+We should care.
