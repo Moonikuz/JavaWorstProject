@@ -1,6 +1,9 @@
 # JavaTestingProject
 We should care.
 
+## Planejamento do Projeto:
+https://www.notion.so/Planejamento-de-HangmanGame-422cb9ed4a434e0f8f0a8eeb43198f48
+
 ## Interesse em testar o projeto:
 
 Caso queira testar o jogo em casa, será preciso copiar o código disponível no repositório criado pelo Ramón e se quiser testar pelo Codespace, será preciso:
