@@ -1,0 +1,600 @@
+import java.util.Scanner;
+import java.util.Random;
+import java.util.ArrayList;
+import java.util.Collections;
+public class CoffeeShopSimulator {
+   public static void main(String[] args) {
+     Scanner entrada = new Scanner(System.in);
+   
+     System.out.println("Enfim, parece que é mais um dia de trabalho no gatoffee, meu novo emprego."); 
+
+     System.out.print("Irás ao trabalho? Digite 0 para 'sim', 1 para 'infelizmente', 2 para 'mas é claro' ou 3 para 'nem queria ter levantado hoje'.");
+     int pick = entrada.nextInt();
+
+     System.out.println("Você escolheu: " + pick + " Espero que estejas preparado, ainda que não quisesse.");
+
+     System.out.println("Kewy: Oi bom dia, eu gostaria de ver o cardápio, por favor.");
+     System.out.println("Olá, seja bem vinda ao gatoffee.");
+
+      
+       System.out.println("\n \nMenu: Escolha uma opção salgada.");
+       System.out.println("10- Waffle recheado com pepperoni. R$16,00");
+       System.out.println("11- Waffle recheado com queijo e orégano, coberto com molho de queijo. R$14,00");
+       System.out.println("12- Gatoast - Caprese + Vegetarian R$15,00");
+       System.out.println("13- Gatoast - Cogumelos com requeijão + Vegan R$16,00");       
+       System.out.println("14- Gatossant com recheio de queijo brie, geléia de pimenta e frango. R$18,00");
+       System.out.println("15- Gatatouille, um quiche com berinjela, pimentão e abobrinha. R$16,00");                  
+      
+       int menu = entrada.nextInt();
+      
+       switch(menu) {
+           case 10:
+               System.out.println("Ótima escolha. Esse sabor é incrível.");
+               break;
+           case 11:
+               System.out.println("Excelente escolha. Esse é um dos favoritos daqui.");
+               break;
+           case 12:
+               System.out.println("Essa opção vegetariana é muito boa, independente se você é ou não.");
+               break;
+           case 13:
+               System.out.println("Essa opção vegana é muito boa, até mesmo para não veganos.");
+               break;
+           case 14:
+               System.out.println("Esse é o queridinho da casa, vais amar mah kiridah.");
+               break;
+           case 15:
+               System.out.println("Ótimo, tem um sabor bem surpreendente, meu predileto, particularmente.");
+               break;                                             
+           default:
+               System.out.println("Nenhum salgado? Tudo bem então.");
+       }
+      
+
+
+       System.out.println("\n \nMenu Doce: Escolha um item, caso queira.");
+       System.out.println("16- Waffle de chocolate ao leite. R$8,00");
+       System.out.println("17- Tartelete de Frutas Vermelhas + Chocolate Rubi. R$12,00");
+       System.out.println("18- Mini Cake de Laranja Bahia. R$6,00");
+       System.out.println("19- Tartelete de Banoffee. R$16,00");       
+       System.out.println("20- Mini Cake de Chocolate com café e calda especial da casa. R$8,00");
+       System.out.println("21- Gegatto: Gelatos, consulte o cardápio respectivo.");                  
+      
+       int menudoce = entrada.nextInt();
+      
+       switch(menudoce) {
+           case 16:
+               System.out.println("Escolha clássica e perfeita. Eles vem em formato de patinhas");
+               break;
+           case 17:
+               System.out.println("Essa é surpreendente, o chocolate rubi com a framboesa, mirtilo e morango, dá o toque perfeito.");
+               break;
+           case 18:
+               System.out.println("Um bolinho simples de laranja, muito refrescante.");
+               break;
+           case 19:
+               System.out.println("Sabores apaixonantes, melhor escolha, um doce de leite com banana e chantilly.");
+               break;
+           case 20:
+               System.out.println("Uma opção bem chocolatuda, para os amantes de chocolate.");
+               break;
+           case 21:
+               System.out.println("Ok, em seguida o cardápio dos Gegattos.");
+               break;                                             
+           default:
+               System.out.println("Nenhum doce? Tabom.");
+       }
+      
+
+
+       System.out.println("\n \nMenu Gegatto: Cada sabor é um Scoop.");
+       System.out.println("22- Limão Siciliano: Sorbet. R$6,00");
+       System.out.println("23- Maracujá: Sorbet. R$8,00");
+       System.out.println("24- Tropical: Manga, Maracujá e Abacaxi com casca de chocolate branco. R$10,00");
+       System.out.println("25- Pistache com chocolate branco e ao leite. R$12,00");       
+       System.out.println("26- Gianduia: Chocolate 60% com Amêndoas. R$10,00");
+       System.out.println("27- Afogatto: Cappuccino com Avelãs. R$10,00");   
+       System.out.println("28- Catamel: Caramelo Salgado. R$11,00");                      
+       System.out.println("29- Berry Bliss: à base de leite com Frutas Vermelhas. R$9,00");      
+
+       int lista = entrada.nextInt();
+      
+       switch(lista) {
+           case 22:
+               System.out.println("Escolha certeira para os amantes de acidez e é super refrescante.");
+               break;
+           case 23:
+               System.out.println("Maracujá é um dos meus prediletos, refrescante pra caramba.");
+               break;
+           case 24:
+               System.out.println("Esse combina refrescância com um toque adocicado.");
+               break;
+           case 25:
+               System.out.println("Pistache tá bombando, né? Ô oleaginosa cara, mas eu gosto.");
+               break;
+           case 26:
+               System.out.println("Você tem um paladar mais maduro vejo, esse é INCRÍVEL.");
+               break;
+           case 27:
+               System.out.println("Quem não ama um cafézinho baum né? Parabéns pela escolha.");
+               break;
+           case 28:
+               System.out.println("Diferente de alguns, não vamos parar de produzir esse maravilhoso sabor, bem que fazes em escolhê-lo.");
+               break;
+           case 29:
+               System.out.println("Também tenho paixão com frutas vermelhas, simplesmente maravilhoso, esse Gegatto.");
+               break;                                                                           
+           default:
+               System.out.println("Nenhum Gegatto? Poxa vida, é sério?.");
+       }
+      
+
+
+       System.out.println("\n \nMenu Meowbidas: Escolha uma, caso deseje.");
+       System.out.println("30- Espresso. R$8,00");
+       System.out.println("31- Chocolate Quente. R$6,00");
+       System.out.println("32- Chai Latte: Chá ao leite com especiarias. R$8,00");
+       System.out.println("33- Espresso Intenso. R$7,00");       
+       System.out.println("34- Espresso Gelado. R$8,00");
+       System.out.println("35- Água. R$3,50");   
+       System.out.println("36- Suco de Morango e Amora. R$7,00");                      
+       System.out.println("37- Suco de Manga e Maracujá. R$7,00");      
+
+       int drinks = entrada.nextInt();
+      
+       switch(drinks) {
+           case 30:
+               System.out.println("Escolha certa para os amantes de um cafézinho.");
+               break;
+           case 31:
+               System.out.println("Só cuidado para não pelar a boca viu?");
+               break;
+           case 32:
+               System.out.println("Uma bebida especial da casa, super perfumada e saborosa.");
+               break;
+           case 33:
+               System.out.println("Olha só, parece que temos alguém que curte um cafézin mais intenso.");
+               break;
+           case 34:
+               System.out.println("Eu confesso que também prefiro bebidas geladas, excelente escolha.");
+               break;
+           case 35:
+               System.out.println("Água, o básico que não tem erro.");
+               break;
+           case 36:
+               System.out.println("Esse suco é maravilhoso, eu sempre tomo ele quando almoço aqui.");
+               break;
+           case 37:
+               System.out.println("Também curtes um maracujázin né? É tão bom, né?.");
+               break;                                                                           
+           default:
+               System.out.println("Nenhuma bebida? Trouxe água de casa, foi?");
+       }
+      
+               System.out.print("\n \n Vamos ao caixa. Entre com os valores dos itens, ");
+               System.out.print("caso o cliente não tenha pedido, digite 0: ");
+               System.out.print("\n Entre com o valor do salgado: ");                              
+               double salgado = entrada.nextDouble();
+               System.out.print("Entre com o valor do doce: ");
+               double doce = entrada.nextDouble();
+               System.out.print("Entre com o valor do Gegatto: ");
+               int gelato = entrada.nextInt();
+               System.out.print("Entre com o valor da bebida: ");
+               double drink = entrada.nextDouble();
+
+               double conta = salgado + doce + gelato + drink;
+
+               System.out.println("Já pode pagar a conta, deu: " + conta);
+
+               System.out.print("Entre com o valor que o/a cliente irá pagar: ");
+
+               double payment = entrada.nextDouble();
+
+               double troco = payment - conta;
+
+               System.out.println("O seu troco ficou: " + troco);
+               System.out.print("Caso o troco der negativo, pode chamar os tira.");
+
+               System.out.print("\n Agora, vamos ler as avaliações do aplicativo e ver se a/o cliente gostou do atendimento.");
+               System.out.print("\n Para isso, digite um valor entre 0 e 5, quanto mais alto, maior satisfação, se não odiou. ");
+               int rating = entrada.nextInt();
+               
+               if (rating < 2) {
+                 System.out.println("A/o cliente não gostou tanto assim, talvez tenha gostado só do cafezinho de cortesia.");
+
+               }
+
+               if (rating < 4) {
+                 System.out.println("A/o cliente ao menos deve ter gostado de brincar com os gatinhos daqui, mas podemos melhorar.");
+
+               } 
+
+               if (rating > 3) {
+                 System.out.println("A/o cliente teve uma experiência bacana, ficamos contentes por fazer o mínimo, eu acho.");
+
+               }
+
+               System.out.print("Agora, vamos ler as avaliações do aplicativo, de fato.");
+
+               Random relatório = new Random();
+               
+               int variável = relatório.nextInt(6);
+
+               System.out.println("\n Avaliação de: " + variável + " estrelas");
+
+               if (variável < 2) {
+
+               System.out.println("Infelizmente achei um pelo de rato no meu croissant e como se não fosse \n suficiente, o café tava amargo.");
+
+               }
+
+               if (variável < 4) {
+
+               System.out.println("O açaí estava com gosto de terra, mas o sorvete de pistache tava delicioso, \n pena que tenho alergia e tive que tomar injeção na veia.");
+
+               }
+               
+               if (variável > 3) {
+
+               System.out.println("Tava tudo maravilhoso, o tartelete de frutas vermelhas, \n o espresso, mas a melhor parte foi brincar com os gatinhos <3");
+
+               }
+
+               System.out.print("O que achas de ajudares a adestrar os gatinhos?");
+               System.out.print("\n Para isso, escolha um(a) felis catus:");
+               System.out.println("38 - Felix");
+               System.out.println("39 - Shadow");
+               System.out.println("40 - Krusby");
+               System.out.println("41 - Lixy");
+               System.out.println("42 - Sprinkles");
+               System.out.println("43 - Ruxy");
+               System.out.println("44 - Sunky");
+               
+               int choice1 = entrada.nextInt();
+               
+               switch (choice1) {
+                case 38:
+                    System.out.println("Escolhestes o Gato Felix.");
+                    break;
+                case 39:
+                    System.out.println("Escolhestes o Gato Shadow.");
+                    break;
+                case 40:
+                    System.out.println("Escolhestes a Gata Krusby.");
+                    break;
+                case 41:
+                    System.out.println("Escolhestes a Gata Lixy.");
+                    break;
+                case 42:
+                    System.out.println("Escolhestes a Gata Sprinkles.");
+                    break;
+                case 43:
+                    System.out.println("Escolhestes o Gato Ruxy.");
+                    break;
+                case 44:
+                    System.out.println("Escolhestes o Gato Sunky.");
+                    break;                                                                                                    
+                default:
+                    System.out.println("Não quis ajudar, pena que vai ter que fazer igual");
+                    System.out.println("Escolhestes o Gato Murderer.");                  
+                    break;
+               }
+
+
+               System.out.println("Agora, ajude-nos a treiná-los. Para essa tarefa árdua e séria, escolha uma ação:");
+               System.out.println("45 - Pular");
+               System.out.println("46 - Rodopiar");
+               System.out.println("47 - Brincar com caneta Laser");
+               System.out.println("48 - Ronronar");
+               System.out.println("49 - Ameaçar");
+               System.out.println("50 - Extorquir comida");
+               System.out.println("51 - Miar bem alto às 3 da manhã no telhado");
+               System.out.println("52 - Pedir bolo de aniversário de atum");
+               System.out.println("53 - Entrar no modo foco e iniciar uma investigação de assassinato na floresta");                                                                                                         
+
+               int choice2 = entrada.nextInt();
+               Random luck = new Random();
+               int value = luck.nextInt(6);
+               
+               switch (choice2) {
+                case 45:
+                if (value > 3) {
+                     System.out.println("Super, conseguiu pular com sucesso.");
+                    break;                   
+                }
+                else {
+                  System.out.println("Infelizmente deslocou um osso da pata direita :(");
+                   break;
+                }
+                case 46:
+                if (value > 3) {
+                    System.out.println("Caramba... Parece que há determinação. Já ganhou :D");
+                    break;
+
+                }
+                else {
+                    System.out.println("Deu até tontura, gente, dá um Betaistina, bem.");
+                    break;
+                }
+                case 47:
+                if (value > 3) {
+                    System.out.println("Nossa, mas que atiçad(a/o). Olha como el(a/e) precisa capturar o feixe de luz roxa.");
+                    break;
+
+                }
+                else {
+                    System.out.println("El(a/e) não quis, desculpa bem é que el(a/e) tá com sono.");
+                    break;
+                }
+                case 48:
+                if (value > 3) {
+                    System.out.println("Prrr... Owwn que querido, ainda bem que não irá me arranhar e me fazer pegar um atestado depois.");
+                    break;
+
+                }
+                else {
+                    System.out.println("Prrr... Owwn, AAAAAAAAAA me arranhou, que sapeca!");
+                    break;
+                }
+                case 49:
+                if (value > 2) {
+                    System.out.println("Rawwr. *Arranha suas escápulas e depois mia de forma serena.*");
+                    break;
+
+                }
+                else {
+                    System.out.println("Rawwr... Plataforma nova gente, eu não vou nem contar a vocês como fiz para ganhar meu primeiro milhão... Quer saber?");
+                    int how = entrada.nextInt();
+                    System.out.println("Eu hipotequei todos os meus antigos bens materias, nossa tu escolhestes esse coiso brega:" + how);
+                    break;
+                }
+                case 50:
+                if (value > 2) {
+                    System.out.println("El gatito mira al croissant que se encontra en la mesa y ahora va a... Dondé está el croissant?");
+                    break;
+
+                }
+                else {
+                    System.out.println("Felinos amam comida, por isso sua comida que ficou para viagem foi tomada e sumiu.");
+                    int why = entrada.nextInt();
+                    System.out.println("Ah que pena, who cares anyways." + why);
+                    break;
+                }
+                case 51:
+                if (value > 2) {
+                    System.out.println("");
+                    break;
+
+                }
+                else {
+                    System.out.println("Nossa que SACO... O que farei agora?");
+                    System.out.println("55 - Tacar um tijolo.");
+                    System.out.println("56 - Berrar bem alto: ô lasquera de bichanos.");
+                    System.out.println("57 - Apreciar os mios noturnos e dormir.");                                                            
+                    int why = entrada.nextInt();
+                    switch (why) {
+                        case 55:
+                    System.out.println("Você tacou um tijolo. Sorte a sua que errastes, senão iria preso por ferir um animal, \n porém acertou a dona Celi, a fofoqueira do 504 que foi comprar um pão quentinho. " + why);                           
+                            break;
+                        case 56:
+                    System.out.println("Você berrou tão alto que o gato pulou pra sua janela e arranhou toda sua cara.");                           
+                            break;
+                        case 57:
+                    System.out.println("Você tenta dormir, de início falha, mas funciona depois que imaginou um coral de gatos cantando Heavy Metal.");                           
+                            break;                                                
+                        default:
+                    System.out.println("Você só ficou com ódio e chutou o abajur. Só prejuízo S2");
+                            break;
+                    }
+                }
+                case 52:
+                    System.out.println("Que massa, adorei a ideia. Pera, eu que terei que fazer o bolo??");
+                    System.out.println("58 - I don't care, screw this stupid cat's birthday.");
+                    System.out.println("59 - Pô, vou tá aceitando então, né?");
+                    System.out.println("60 - Eu vou dizer que farei, mas na verdade vou comprar na padaria pronto.");                                                            
+                    int why = entrada.nextInt();
+                    switch (why) {
+                        case 58:
+                    System.out.println("Você fez gatinhos chorar. Seu ser horrível... É deprimente a sua existência."+ why);                           
+                            break;
+                        case 59:
+                    System.out.println("Você decide fazer o bolo com a receita da Dia Supermercados, pena que a chave do carro caiu na massa e explodiu o forno, queimando tudo.");                           
+                            break;
+                        case 60:
+                    System.out.println("Você decide comprar a massa na padaria, mas a vigilância sanitária fechou a padaria na hora que você foi comprar, ótimo, ias mesmo dar um bolo normal para um felino?");                           
+                            break;                                                
+                        default:
+                    System.out.println("Você só ficou com ódio e deu uma meia de presente para o felino.");
+                            break;
+                    }   
+                case 53:
+                    System.out.println("Você inicia uma investigação de um corpo que fora encontrado na floresta enquanto faziam uma trilha turística. \n o que farás primeiro?");
+                    System.out.println("61 - Eu vou buscar digitais que supostamente rodeam o corpo.");
+                    System.out.println("62 - Eu vou mandar 'el gatito Panettone' para caçar possíveis suspeitos que estão foragidos.");
+                    System.out.println("63 - Ah, mas eu nem quero fazer nada bem, tô com sono hoje.");
+                    int lazy = entrada.nextInt();
+                    switch (lazy) {
+                      case 61:
+                      Random fingerprint = new Random();
+                      int suposto = fingerprint.nextInt(3);
+                      if (suposto == 0) {
+                        System.out.println("Infelizmente você não encontrou nenhuma digital.");
+                      }
+                      if (suposto == 1) {
+                        System.out.println("Você encontrou uma única digital, mas era sua, que tristeza.");
+                      }
+                      if (suposto == 2) {
+                        System.out.println("Encontrastes algumas digitais e até fios de cabelo. Agora desejas levar ao laboratório? \n 1- Sim 2- Não");
+                        int lab = entrada.nextInt();
+                        if (lab == 1) {
+                            System.out.println("Você decide levar ao laboratório e descobrem, através do teste de DNA \n que foi seu vizinho Cleiton, dono da rede Cleiton's Business que matou uma amiga da igreja de sua mãe. ");
+                        }
+                        if (lab == 2) {
+                            System.out.println("Nossa para que a tamanha desmotivação? Vida que segue né.");
+                        }
+                        else {
+                    System.out.println("Parece que você não tá querendo...");
+                        }
+                      }
+                case 62:
+                    System.out.println("El gatito Panettone está cansado hoje. Desejas insistir? \n 1- Sim 2- Não");      
+                    int panettone = entrada.nextInt();
+                    if (panettone == 1) {
+                        System.out.println("Deu certo, ele agora decide farejar, até melhor do que um cachorro. Parece que até encontrou o suspeito. \n Essa foi mais uma operação gatito Panettone.");
+
+                         }
+                    if (panettone == 2) {
+                        System.out.println("Não estás querendo brincar, né? Já sei você tá com um amargor crônico. Te receito um Terasanimo.");
+                      }
+                    break;  
+                         case 63:
+                         System.out.println("Parece que você não tá querendo, não te julgo, a disposição é adquirida com muito esforço + relexamento.");
+                         break;                           
+                    }                        
+                       case 54:
+                    System.out.println("\n Decides investir na carreira felina. Escolha uma entidade: \n ");
+                    System.out.println("Felix");
+                    System.out.println("Shadow");
+                    System.out.println("Krusby");
+                    System.out.println("Lixy");
+                    System.out.println("Phyzel");
+
+                    String career = entrada.next();
+
+                    System.out.println("Você posta uma foto na qual a pose do felino é incrível. \n Esplêndido, diversas pessoas viram e deram like. Acho que o perfil de " + career + " irá bombar");
+                         break;                                                                                                                 
+                default:
+                    System.out.println("Não quis ajudar, pena que terás que fazer igual");
+                    System.out.println("Escolhestes o Gato Murderer.");                  
+                    break;
+               }
+                    System.out.println("*\n \n Brincadeiras a parte, agora que tal jogar cadê o petisco com os felinos?*");
+                    System.out.println("\n Escolha 'true' ou 'false' para selecionar o recipiente que esconderás o petisco embaixo.");
+                    boolean petisco = entrada.nextBoolean();
+                    
+                   ArrayList<String> bowls = new ArrayList<String>();
+                   
+                   bowls.add("bowl1");
+                   bowls.add("bowl2");
+                   bowls.add("bowl3");
+                   bowls.add("bowl4");
+
+                   Collections.shuffle(bowls);
+
+                   System.out.println("\nElementos embaralhados: \n");
+                   for(int i=0; i < bowls.size(); i++) {
+                    System.out.println(bowls.get(i));
+
+                   }
+
+
+                   System.out.println("\n Escolha agora um felino para desafiar a encontrar o petisco.");
+                   System.out.println("64- Ms. Sprinkles");
+                   System.out.println("65- Harley");
+                   System.out.println("66- Ruxy");
+                   System.out.println("67- Sunky");
+                   System.out.println("68- Murber");
+
+                   int challenge = entrada.nextInt();
+
+                   switch(challenge) {
+                    case 64:
+                    System.out.println("Ótimo, agora vamos ver se ela acertará.");
+                    break;
+                    case 65:
+                    System.out.println("Ótimo, agora vamos ver se ela acertará.");
+                    break;
+                    case 66:
+                    System.out.println("Ótimo, agora veremos se ele acertará.");
+                    break;
+                    case 67:
+                    System.out.println("Ótimo, agora vamos ver se ele acertará");
+                    break;
+                    case 68:
+                    System.out.println("Incrível, será que 'da evil lil due' acertará?");
+                    break;
+                      default:
+                    System.out.println("Vamos seguir, fingirei que você está querendo jogar.");
+                    break;
+
+                  }
+                   Random guess = new Random();
+                   boolean objeto = guess.nextBoolean();
+
+                   if (objeto = petisco) {
+                    System.out.println("Parece que o felino acertou. Mais sorte da próxima vez.");
+
+                   }
+                  else {
+                    System.out.println("Estupendo! Você ganhou do felino, ainda que você dê a ele o petisco do mesmo jeito. \n Até que foi divertido :D ");
+
+                  }
+                   System.out.println("Escolha do felino: " + objeto);
+
+                   System.out.println("\n Caso deu 'false', ele errou, logo você ganhou. Se deu 'true' é devido ao acerto do felino, logo não deu dessa vez.");
+
+                   System.out.println("\n Uma atendente disse que está ocorrendo uma promoção. Se você ganhar, levará um cupom que poderá ser trocado por um Gegatto.");
+
+                   System.out.println("Para tal, vamos de Cara ou Coroa. Escolha sua aposta.");
+
+                   System.out.println("\n69- Cara");
+
+                   System.out.println("\n70- Coroa");
+
+                   int moeda = entrada.nextInt();
+
+                   switch (moeda) {
+                     case 69:
+                     System.out.println("Escolhestes cara. Torça para que não dê coroa.");
+
+                     Random face = new Random();
+                     boolean lucky = face.nextBoolean();
+
+                     if (lucky == true) {
+                      System.out.println("Infelizmente perdestes.");
+
+                     }
+                     else {
+                      System.out.println("Boaaa, que pessoa de sorte você, hein? O seu próximo Gegatto será por conta da casa.");
+
+                     }
+                     break;
+
+                     case 70:
+                     System.out.println("Escolhestes coroa. Só espero que não saia cara.");
+
+                     Random crown = new Random();
+                     boolean suerte = crown.nextBoolean();
+
+                     if (suerte == false) {
+                      System.out.println("Aeee, ganhastes seu cupom Gegatto, o próximo será por conta da casa.");
+System.out.println("\n \nEscolha um sabor de cortesia da casa.");
+System.out.println("22- Limão Siciliano: Sorbet. R$6,00");
+System.out.println("23- Maracujá: Sorbet. R$8,00");
+System.out.println("24- Tropical: Manga, Maracujá e Abacaxi com casca de chocolate branco. R$10,00");
+System.out.println("25- Pistache com chocolate branco e ao leite. R$12,00");       
+System.out.println("26- Gianduia: Chocolate 60% com Amêndoas. R$10,00");
+System.out.println("27- Afogatto: Cappuccino com Avelãs. R$10,00");   
+System.out.println("28- Catamel: Caramelo Salgado. R$11,00");                      
+System.out.println("29- Berry Bliss: à base de leite com Frutas Vermelhas. R$9,00");
+
+System.out.println("\n \n Aproveite seu Gegatto S2");
+
+                     }
+                      else {
+                        System.out.println("Infelizmente não foi dessa vez, mas quem sabe em outra oportunidade?");
+
+                      }
+                        System.out.println("O resultado foi: " + suerte);
+
+                        System.out.println("\n Se deu true, signfica que o felino acertou, caso contrário, errou.");
+                     }
+
+
+                     System.out.println("Esperamos que tenha gostado de nossa cafeteria. Será um prazer termos você de volta algum dia.");
+
+       entrada.close();
+
+                   }
+
+   }
